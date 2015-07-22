@@ -4,6 +4,9 @@ import java.util.Iterator;
 
 public class ASTList extends ASTree {
     protected List<ASTree> children;
+    public ASTList(List<ASTree> list) {
+    	children = list;
+    }
     public ASTree child(int i) {
         return children.get(i);
     }

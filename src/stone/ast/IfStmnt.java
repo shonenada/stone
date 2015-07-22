@@ -2,7 +2,7 @@ package stone.ast;
 import java.util.List;
 
 public class IfStmnt extends ASTList {
-    public IfStmnt(List<ASTree c) {
+    public IfStmnt(List<ASTree> c) {
         super(c);
     }
     public ASTree condition() {
@@ -12,7 +12,7 @@ public class IfStmnt extends ASTList {
         return child(1);
     }
     public ASTree elseBlock() {
-        return numChilidren() > 2 ? child(2) : null;
+        return numChildren() > 2 ? child(2) : null;
     }
     public String toString() {
         return "(if " + condition() + " " + thenBlock() + " else " + elseBlock() + ")";

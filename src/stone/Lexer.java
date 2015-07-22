@@ -83,7 +83,7 @@ public class Lexer {
                 if (matcher.group(3) != null) {
                     token = new NumToken(lineNo, Integer.parseInt(m));
                 } else if (matcher.group(4) != null) {
-                    tokne = new StringToken(lineNo, toStringLiteral(m));
+                    token = new StringToken(lineNo, toStringLiteral(m));
                 } else {
                     token = new IdToken(lineNo, m);
                 }
@@ -103,7 +103,7 @@ public class Lexer {
                     c = s.charAt(++i);
                 } else if (c2 == 'n') {
                     ++i;
-                    c = '\n'
+                    c = '\n';
                 }
             }
             sb.append(c);
